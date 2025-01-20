@@ -14,7 +14,7 @@
         </div>
         <div class="fiyat-kismi">
           <div class="fiyat">{{ item.fiyat }} TL</div>
-          <button class="kaldir-buton" @click="removeFromCart(index)">Kaldır</button>
+          <button class="kaldir-buton" @click="removeFromCart(index)">Sepetten Çıkar</button>
         </div>
       </div>
       <div class="sepet-toplam">
@@ -25,7 +25,7 @@
           </div>
           <div class="kargo-fiyat">
             <span>Kargo Ücreti:</span>
-            <span>{{ shippingCost }} TL</span>
+            <span>{{ shippingCost }},00 TL</span>
           </div>
           <div class="genel-toplam">
             <span>Genel Toplam:</span>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div v-else class="bos-sepet">
-      <p>Sepetiniz boş.</p>
+      <h2>Sepetiniz boş.</h2>
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ import { useCartStore } from '~/stores/cart';
 // Pinia store'u kullan
 const cartStore = useCartStore();
 
-const shippingCost = 50;
+const shippingCost = 99;
 
 
 // Store'dan getter'lara ve state'e erişim
